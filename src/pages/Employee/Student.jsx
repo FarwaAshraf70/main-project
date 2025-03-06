@@ -84,7 +84,7 @@ const student = () => {
 
 
         // setAllStudentData([...studentData, newStudentData])
-       
+        const resetForm = () => {
             setFirstName('');
             setLastName('');
             setEmail('');
@@ -96,7 +96,9 @@ const student = () => {
             setShowModal(false);
             setEditIndex(null);
         }
-        
+        resetForm();
+        setShowModal(false);
+        setEditIndex(null)
     }
     const deleteForm = (index) => {
         setAllStudentData(studentData.filter((_, i) => i !== index));
